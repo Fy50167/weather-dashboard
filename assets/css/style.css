@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+
+header {
+    color: white;
+}
+
+.input-border {
+    border: 1px solid black;
+}
+
+.btn {
+    background-color: rgb(8 145 178);
+    color: white;
+    border: 1px solid white;
+}
+
+.search-history {
+    background-color: grey;
+    color: black;
+    border: 1px solid white;
+}
+
+.bottom-border {
+    border-bottom: 1px solid grey;
+}
