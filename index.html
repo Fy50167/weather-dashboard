@@ -10,7 +10,7 @@
 <body>
     <header class = 'p-6 text-center bg-black text-2xl font-bold'><h1>Weather Dashboard</h1></header>
 
-    <div class = 'flex h-screen'>
+    <div class = 'flex h-screen w-full'>
 
         <section class = 'bg-gray-200 w-1/5 h-full p-4 flex flex-col'id = 'left-form'>
             <form class = 'flex flex-col justify-evenly h-1/6 bottom-border' id = 'search-form'>
@@ -19,13 +19,33 @@
                 <button class="btn rounded-lg">Search</button>
             </form>
 
-            <div class = 'flex flex-col justify-start grow py-4' id = 'search-history'>
-                <button class="btn rounded-lg">Search</button>
+            <div class = 'flex flex-col justify-start grow' id = 'search-history'>
+                <button class="btn rounded-lg my-4">Search</button>
             </div>
         </section>
 
-        <section id = 'search-results'>
+        <section class = 'grow p-4 pr-8' id = 'search-results'>
+            <div class = 'h-1/5 w-full border-1 flex flex-col justify-evenly p-2' id = 'current-weather'>
+                <h2 class = 'font-bold text-2xl'>Atlanta(9/14/2022)☀️</h2>
+                <h3 class = 'text-lg font-medium'>Temp:</h3>
+                <h3 class = 'text-lg font-medium'>Wind:</h3>
+                <h3 class = 'text-lg font-medium'>Humidity:</h3>
+            </div>
 
+            <div class = 'mt-2 h-full'>
+                <h2 class= 'font-bold text-xl'>Five-Day Forecast:</h2>
+                <div class = 'flex justify-evenly h-full' id = 'forecast'>
+                    <div class = 'bg-gray-500 mt-4 w-1/6 h-1/4 flex flex-col justify-evenly p-4'>
+                        <h3 class = 'text-white font-bold text-lg'>9/14/2022</h3>
+                        <h3>☀️</h3>
+                        <h3 class = 'text-white'>Temp:</h3>
+                        <h3 class = 'text-white'>Wind:</h3>
+                        <h3 class = 'text-white'>Humidity:</h3>
+                    </div>
+
+                    
+                </div>
+            </div>
         </section>
     </div>
 
