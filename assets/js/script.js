@@ -41,14 +41,14 @@ document.getElementById('search-form').addEventListener('submit', function(event
     event.preventDefault();
     const city = formInputEl.value;
     formInputEl.value = '';
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIkey}`) // First we perform a fetch to retrieve the lat and long based on city.
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${APIkey}`) // First we perform a fetch to retrieve the lat and long based on city.
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
             lat = data[0].lat.toFixed(2); // Converting coordinates to two decimal points to follow documentation format.
             long = data[0].lon.toFixed(2);
-            fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${APIkey}`) // Then we have to perform another fetch using the coordinate variables to receive weather data.
+            fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${APIkey}`) // Then we have to perform another fetch using the coordinate variables to receive weather data.
                 .then(function (response) {
                     return response.json();
                 })
